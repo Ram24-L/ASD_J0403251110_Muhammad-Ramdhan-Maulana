@@ -7,6 +7,7 @@
 #Fungsi Baca File
 path = "data.txt"
 
+#!!Ini Inisiatif saat itu!!
 #Fungsi Read file
 def read_file(data):
     #Error Handling
@@ -17,6 +18,7 @@ def read_file(data):
     except(FileNotFoundError):
         print("File Tidak Ada")
 
+#!!Ini Inisiatif saat itu!!
 #Fungsi Save File
 def save_file(data,saved_data):
     #Error Handling

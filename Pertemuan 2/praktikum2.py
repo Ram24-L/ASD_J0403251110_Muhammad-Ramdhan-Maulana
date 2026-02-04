@@ -22,7 +22,7 @@ def baca_file(file):
 
 
 #========================================================
-# Praktikum 2 : Konsep ADT dan File Handling (Stuedi Kasus)
+# Praktikum 2 : Konsep ADT dan File Handling (Studi Kasus)
 # Latihan 2 : Membuat Fungsi Menampilkan data
 #========================================================
 
@@ -40,6 +40,11 @@ def tampilkan_data(data):
         nama = data[nim]["nama"]
         nilai = data[nim]["nilai"]
         print(f"{nim:10} | {nama:<12} | {nilai:>5}")
+
+#========================================================
+# Praktikum 2 : Konsep ADT dan File Handling (Studi Kasus)
+# Latihan 3 : Membuat Fungsi Mencari Data
+#========================================================
 
 def cari_data(data):
     if len(data) == 0:
@@ -61,7 +66,10 @@ def cari_data(data):
     else:
         print("Data Tidak Ditemukan")
 
-
+#========================================================
+# Praktikum 2 : Konsep ADT dan File Handling (Studi Kasus)
+# Latihan 4 : Membuat Fungsi untuk Mengupdate data
+#========================================================
 def update_nilai(data):
     nim = input("Masukkan NIM yang ingin diupdate datanya : ").strip().upper()
     if nim in data:
