@@ -1,0 +1,11 @@
+BRG001,Roti,25
+BRG002,Air Mineral,20
+BRG003,Teh Botol,10
+BRG004,Indomie,10
+BRG005,Milo,10
+BRG006,Indomilk,12
+BRG007,Botol,20
+BRG008,Saus ABC,12
+BRG009,Pampers,10
+BRG010,Pepsodent,10
+BRG011,Pulpen,50
