@@ -4,71 +4,121 @@
 #Kelas  : TPL B2
 #===================================
 
-#==============================================
-#Latihan No 1
-#No 1 Implementasi fungsi untuk menghapus node 
-#dengan nilai tertentu
-#==============================================
-class node:
-    def __init__(self,data):
+##===================================
+# Single Linked List + Delete Node
+#===================================
+
+class Node:
+    def __init__(self, data):
         self.data = data
         self.next = None
-        self.prev = None
 
-class DoublyLinkedList:
+
+class SinglyLinkedList:
     def __init__(self):
         self.head = None
-        self.tail = None
 
-    def insert_at_end(self,data):
-        new_node = node(data)
+    # tambah di akhir
+    def insert_at_end(self, data):
+        new_node = Node(data)
+
         if not self.head:
             self.head = new_node
-            self.tail = new_node
-        else:
-            self.tail.next = new_node
-            new_node.prev = self.tail
-            self.tail = new_node
+            return
 
-    def display_forward(self):
-        print("\nTraversing Forward:")
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+        temp.next = new_node
+
+    # tampilkan isi list
+    def display(self):
+        if not self.head:
+            print("kosong")
+            return
+
         temp = self.head
         while temp:
-            print(temp.data,end=" -> ")
+            print(temp.data, end=" -> ")
             temp = temp.next
         print("null")
 
-    def display_backward(self):
-        print("\nTraversing backward : ")
-        temp = self.tail
-        while temp:
-            print(temp.data, end=" -> ")
-            temp = temp.prev
-        print("null")
-
-    def delete_node(self,key):
+    # delete berdasarkan nilai
+    def delete_node(self, key):
         temp = self.head
+
+        # jika head yang dihapus
         if temp and temp.data == key:
             self.head = temp.next
-            temp = None
-            return
+            return True
+
         prev = None
         while temp and temp.data != key:
             prev = temp
             temp = temp.next
-        if temp is None:
-            return
+
+        if not temp:
+            return False
+
         prev.next = temp.next
-        temp = None
+        return True
 
-# Contoh Penggunaan
-dll = DoublyLinkedList()
-dll.insert_at_end(3)
-dll.insert_at_end(5)
-dll.insert_at_end(13)
-dll.insert_at_end(2)
-dll.display_forward()
-#Hapus Node
-dll.delete_node(13)
-dll.display_forward()
 
+#========================
+# INPUT LINKED LIST
+#========================
+
+ll = SinglyLinkedList()
+
+while True:
+    try:
+        x = input("Masukkan elemen linked list (pisah koma): ").strip()
+        if x == "":
+            break
+
+        nums = [int(n.strip()) for n in x.split(",")]
+        for n in nums:
+            ll.insert_at_end(n)
+        break
+
+    except ValueError:
+        print("Format salah. Contoh: 3,5,7,9")
+
+
+#========================
+# TAMPIL SEBELUM HAPUS
+#========================
+
+print("\nLinked List sebelum hapus:")
+ll.display()
+
+
+#========================
+# INPUT HAPUS
+#========================
+
+while True:
+    try:
+        key = int(input("\nMasukkan nilai yang ingin dihapus: "))
+        break
+    except ValueError:
+        print("Masukkan satu angka saja")
+
+
+#========================
+# PROSES HAPUS
+#========================
+
+result = ll.delete_node(key)
+
+#========================
+# TAMPIL SESUDAH HAPUS
+#========================
+
+print("\nLinked List sesudah hapus:")
+ll.display()
+
+if result:
+    print("Node berhasil dihapus")
+else:
+    print("Node tidak ditemukan")
