@@ -1,0 +1,42 @@
+
+#Normal Linked list
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def insert_at_end(self,data):
+        #Memasukkan data ke dalam blueprint node
+        new_node = Node(data)
+        #Jika List Kosong
+        if not self.head:
+            self.head = new_node
+            return
+        
+        #Jika List tidak kosong (terdapat head), maka cari node terakhir
+        temp = self.head
+        #looping untuk mengakses node paling akhir
+        while temp.next:
+            temp = temp.next
+
+        #Sambungkan Node terakhir ke node baru
+        temp.next = new_node
+
+    def display(self):
+        temp = self.head
+        while temp:
+            print(temp.data, end=" -> ")
+            temp = temp.next
+        print("null")
+
+ll = LinkedList()
+ll.insert_at_end(3)
+ll.insert_at_end(4)
+ll.insert_at_end(5)
+ll.display()
+
+        

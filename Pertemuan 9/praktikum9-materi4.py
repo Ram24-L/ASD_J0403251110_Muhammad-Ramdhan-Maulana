@@ -36,3 +36,14 @@ root.right.left = Node("F")
 
 print("Hasil cetak traversal pre order : ")
 inorder(root)
+
+#Pembahasan : 
+# di materi ke empat, kita mempelajari bagaimana traversal in order bekerja 
+# dan mengimplementasikan nya
+# traversal inorder menelusuri node dari : 
+# left -> root -> right
+# pengimplementasian mirip seperti preorder hanya berbeda urutan saja
+# struktur ini akan menghasilkan : 
+# D B E A F C
+# dimana elemen yang dicetak mulai dari child left dengan level terbawah
+# diikuti oleh root nya yang kemudian mencetak child right dari root tersebut, dan seterusnya

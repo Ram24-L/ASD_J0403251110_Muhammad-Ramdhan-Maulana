@@ -36,3 +36,15 @@ root.right.left = Node("F")
 
 print("Hasil cetak traversal pre order : ")
 postorder(root)
+
+#Pembahasan : 
+# di materi ke empat, kita mempelajari bagaimana traversal post order bekerja 
+# dan mengimplementasikan nya
+# traversal post otder menelusuri node dari : 
+# left -> right -> root
+# pengimplementasian mirip seperti preorder ataupun in order, hanya berbeda urutan saja
+# struktur ini akan menghasilkan : 
+# D E B F C A
+# elemen yang dicetak diawali dari child left dengan level terbawah, 
+# disusuli oleh sibling / right nya dengan level yang sama
+# setelah itu disusul oleh parent dari kedua child tersebut, dan seterusnya

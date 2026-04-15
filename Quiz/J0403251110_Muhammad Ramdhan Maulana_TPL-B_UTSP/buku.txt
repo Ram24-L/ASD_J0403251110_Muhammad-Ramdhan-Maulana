@@ -1,0 +1,10 @@
+BK001,Madilog,50000
+BK002,Laut Bercerita,75000
+BK003,Why We Sleep,91000
+BK004,Berani Tidak Disukai,60000
+BK005,Psychology of Money,70000
+BK006,Atomic Habits,80000
+BK007,The Alchemist,75000
+BK008,Gun Germs & Steel, 81000
+BK009,Sapiens,95000
+BK010,Pulang, 90000

@@ -1,8 +1,8 @@
 
 #=============================================
-#Nama   : Muhammad Ramdhan Maulana
-#NIM    : J0403251110
-#Kelas  : TPL B2
+#Nama : Muhammad Ramdhan Maulana
+#NIM : J0403251110 
+#Kelas : TPL B2
 #=============================================
 
 # ==========================================================
@@ -39,6 +39,7 @@ class QueueBengkel:
         new_node = Node(no, nama, servis)  # Membuat node baru
 
         # Jika antrian kosong
+        #Jika tidak ada ini, maka akan terdapat celah 
         if self.rear is None:
             self.front = new_node
             self.rear = new_node
@@ -103,6 +104,7 @@ def main():
     q = QueueBengkel()  # Membuat objek Queue
 
     while True:
+        #Menu Utama dari program tsb
         print("\n=== Sistem Antrian Bengkel ===")
         print("1. Tambah Pelanggan")
         print("2. Layani Pelanggan")

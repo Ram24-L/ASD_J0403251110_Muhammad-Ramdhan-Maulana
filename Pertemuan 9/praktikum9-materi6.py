@@ -34,3 +34,13 @@ root.left.right = Node("Staff 2")
 root.right.left = Node("Staff 3")
 
 preorder(root)
+
+#Pembahasan : 
+# di materi ke-6, kita melakukan latihan dengan pengimplementasian praktik tree
+# dari real world problem, yaitu struktur organisasi dari perusahaan
+# yang terdiri dari 2 level hierarki
+# pengimplementasian tidak jauh berbeda dari abstrak tree yang berupa abjad
+# hanya berbeda dari isi data setiap node-nya
+# kemudian pencetakan dilakukan dengan memakai pre order traversal
+
+

@@ -38,3 +38,19 @@ root.right.left = Node("F")
 
 print("Hasil cetak traversal pre order : ")
 preorder(root)
+
+#Pembahasan : 
+# di materi 3, setelah cara membuat struktur tree dipelajari,
+# pembahasan masuk ke metode-metode pengaksesan dari struktur tree (dalam kasus ini print)
+# Terdapat 3 metode traversal :
+# 1. Pre-order
+# 2. In-Order
+# 3. Post-Order
+# di materi 3, pre order dipelajari terlebih dahulu
+# traversal preorder merupakan traversal yang dimulai dari:
+# root -> left -> right
+# traversal2 ini dibuat dengan memanfaatkan fungsi rekursif
+# yang nanti pada hasil akhirnya, struktur tree ini akan menghasilkan : 
+# A B D E C F
+# yang mana child dari B tercetak semua terlebih dahulu, 
+# baru menelusuri ke node c dan child nya

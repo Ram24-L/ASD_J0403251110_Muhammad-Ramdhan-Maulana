@@ -20,17 +20,13 @@ root = node("A")
 print("Data dari root: ",root.data)
 print("Left child root : ",root.left)
 print("Right child root : ",root.right)
-#Mendaftarkan node B menjadi left child dari A
-root.left = node("B")
-#Mendaftarkan node C menjadi right child dari A
-root.right = node("C")
-print("Data dari root: ",root.data)
-print("Left child root : ",root.left.data)
-print("Right child root : ",root.right.data)
-#Mendaftarkan node D menjadi left child dari node B yang merupakan child left dari A
-root.left.left= node("D")
-#Mendaftarkan node E menjadi right child dari node B
-root.left.right = node("E")
 
-#Mendaftarkan Node F Menjadi left child dari node C yang merupakan right child dari C
-root.right.left = node("F")
+# Pembahasan : 
+# Materi 1 mempelajari bagaimana kita dapat menginisialisasi node yang dapat diimplementasikan
+# pada struktur data tree, dimana node memiliki 3 atribut, yang memiliki fungsi
+# 1. data : tempat value disimpan
+# 2. left : child sebelah kiri dari root
+# 3. right : child sebelah kanan dari root
+# setelah membuat class node yang berisi atribut tersebut
+# Pembuatan tree dapat langsung dieksekusi dengan membuat root terlebih dahulu
+# lalu mendaftarkan child dari root tsb

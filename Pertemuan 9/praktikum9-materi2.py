@@ -33,6 +33,17 @@ print("Data pada root : ",root.data)
 print("Child left root : ",root.left.data)
 print("Child right root : ",root.right.data)
 #Menampilkan child level 2
-print("Child left dari B : ",root.left.left.data)
+print("Child left dari B : ",root.leftleft.data)
 print("Child right dari B : ",root.left.right.data)
 print("Child left dari C : ",root.right.left.data)
+
+# Pembahasan : 
+# Materi 2 mempelajari bagaimana kita dapat mengonstruksi sebuah tree
+# Langkah langkah : 
+# 1.Membuat class dari node
+# 2.Instantiasi objek dari node untuk membuat root
+# 3.Mendaftarkan child node sesuai struktur yang diinginkan
+#   dengan mengisi atribut left/right dari setiap node
+# setelah struktur child dibuat, kita dapat melihat data nya 
+# dalam kasus ini print manual sederhana
+
